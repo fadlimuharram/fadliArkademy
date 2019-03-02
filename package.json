@@ -1,0 +1,18 @@
+{
+  "name": "soal-arkademy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "jalan": "node soal/no1.js && node soal/no2.js && node soal/no3.js && node soal/no4.js && node soal/no5.js",
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mysql": "^2.16.0"
+  }
+}

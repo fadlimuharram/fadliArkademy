@@ -1,0 +1,29 @@
+<% include header.ejs %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md">
+      <form method="post">
+        <div class="form-group">
+          <label for="inputProduct">Product Name</label>
+          <input type="text" class="form-control" name="product" id="inputProduct" placeholder="Nama Product">
+        </div>
+
+        <div class="form-group">
+          <label for="daftar">Categories</label>
+          <select class="form-control" id="daftar" name="categories" multiple data-live-search="true">
+          <% categories.forEach((data,index)=>{ %>
+            <option value=<%=data.id; %>><%=data.name;%></option>
+          <% }) %>
+            
+          </select>
+        </div>
+        
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<% include footer.ejs %>

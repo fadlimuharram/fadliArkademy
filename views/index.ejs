@@ -1,0 +1,32 @@
+<% include header.ejs %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Category Name</th>
+            <th scope="col">Product</th>
+          </tr>
+        </thead>
+        <tbody>
+        <% data.forEach((dt,index)=> { %>
+        <tr>
+          <th><%=dt.id %></th>
+          <td><%=dt.category_name %></td>
+          <td><%=dt.products %></td>
+        </tr>
+
+        <% }) %>
+
+          
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<% include footer.ejs %>

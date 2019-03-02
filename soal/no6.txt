@@ -1,0 +1,27 @@
+create query : 
+
+    CREATE TABLE categories (
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    name VARCHAR(30) NOT NULL
+    );
+
+    CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    name VARCHAR(30) NOT NULL,
+    category_id INT,
+    FOREIGN KEY(category_id) REFERENCES categories(id)
+    );
+
+
+A :
+
+    INSERT INTO categories(name) VALUES ("Peralatan Mandi"),("Mie Instant"),("Olahan Daging")
+
+    INSERT INTO products(name, category_id) VALUES("Shampo",1),("Sikat Gigi",1),("indomi",2),("mie sedap",2),("nuget",3)
+
+
+
+B :
+
+    SELECT categories.id AS id, categories.name as category_name, GROUP_CONCAT(products.name) AS products FROM categories INNER JOIN products ON categories.id = products.category_id GROUP BY categories.id
+
